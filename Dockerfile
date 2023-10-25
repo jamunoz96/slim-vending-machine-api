@@ -21,6 +21,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN git config --global user.email "cherif.bouhelaghem@gmail.com" \
     && git config --global user.name "Cherif Bouchelaghem"
     
-# RUN composer install && composer migrate && composer seed
-
 RUN docker-php-ext-install pdo pdo_mysql
+
+RUN composer install
